@@ -13,13 +13,11 @@ const height = container.clientHeight;
 sidebar.style.top = `-${(slidesCount - 1) * 100}vh`;
 
 upBtn.addEventListener('click', () => {
-  changeActiveSlideIndex('up');
-  changeSlide();
+  changeActiveSlideIndex('up');  
 })
 
 downBtn.addEventListener('click', () => {
-  changeActiveSlideIndex('down');
-  changeSlide();
+  changeActiveSlideIndex('down');  
 })
 
 
@@ -37,9 +35,8 @@ function changeActiveSlideIndex(direction) {
       activeSlideIndex = slidesCount - 1;
     }     
   }  
-};
 
-function changeSlide(){
-  mainSlides.style.transform = `translateY(-${activeSlideIndex * height}px)`;
-  sidebar.style.transform = `translateY(${activeSlideIndex * height}px)`;
+
+mainSlides.style.transform = `translateY(-${activeSlideIndex * height}px)`;
+sidebar.style.transform = `translateY(${activeSlideIndex * height}px)`;
 }
