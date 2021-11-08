@@ -20,6 +20,14 @@ downBtn.addEventListener('click', () => {
   changeActiveSlideIndex('down');  
 })
 
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'ArrowUp' || event.key === 'w' || event.key === 'ц' ){
+    changeActiveSlideIndex('up');
+  } else if (event.key === 'ArrowDown' || event.key === 's' || event.key === 'і' || event.key === 'ы'){
+    changeActiveSlideIndex('down');
+  }
+})
+
 
 
 function changeActiveSlideIndex(direction) {
